@@ -43,7 +43,7 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
                         String path = file.getAbsolutePath();       
                         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, TestCapabilities.DEVICE_NAME);
                         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, TestCapabilities.PLATFORM_NAME);
-                        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, TestCapabilities.PLATFORM_VERSION);
+//                        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, TestCapabilities.PLATFORM_VERSION);
                         capabilities.setCapability(MobileCapabilityType.APP, path);
                         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, TestCapabilities.AUTOMATION_NAME);
                    

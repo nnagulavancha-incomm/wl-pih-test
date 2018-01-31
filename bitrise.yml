@@ -14,7 +14,7 @@ workflows:
             # debug log
             set -x
             npm install -g appium
-            brew upgrade carthage
+            #brew upgrade carthage
             appium &>/dev/null &
             # brew install maven
             mvn install
