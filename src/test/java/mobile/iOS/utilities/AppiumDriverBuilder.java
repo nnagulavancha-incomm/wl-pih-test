@@ -15,6 +15,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import java.io.File;
 import java.net.MalformedURLException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -38,11 +39,12 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 
                 @Override
 		public IOSDriver build()  {
-                        
+                        File file = new File("wl_pih.app");
+                        String path = file.getAbsolutePath();       
                         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, TestCapabilities.DEVICE_NAME);
                         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, TestCapabilities.PLATFORM_NAME);
-//                        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, TestCapabilities.PLATFORM_VERSION);
-                        capabilities.setCapability(MobileCapabilityType.APP, TestCapabilities.APP_URL);
+                        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, TestCapabilities.PLATFORM_VERSION);
+                        capabilities.setCapability(MobileCapabilityType.APP, path);
                         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, TestCapabilities.AUTOMATION_NAME);
                    
                         IOSDriver<IOSElement> driver = null;
