@@ -40,7 +40,9 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
                 @Override
 		public IOSDriver build()  {
                         File file = new File("wl_pih.app");
+                        System.out.println("first");
                         String path = file.getAbsolutePath();       
+                        System.out.println("second " + path);
                         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, TestCapabilities.DEVICE_NAME);
                         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, TestCapabilities.PLATFORM_NAME);
 //                        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, TestCapabilities.PLATFORM_VERSION);
@@ -49,7 +51,7 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
                    
                         IOSDriver<IOSElement> driver = null;
                     try {
-                        driver = new IOSDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
+                        driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
                     } catch (MalformedURLException ex) {
                         Logger.getLogger(AppiumDriverBuilder.class.getName()).log(Level.SEVERE, null, ex);
                     }   
