@@ -46,12 +46,12 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
                         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, TestCapabilities.DEVICE_NAME);
                         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, TestCapabilities.PLATFORM_NAME);
 //                        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, TestCapabilities.PLATFORM_VERSION);
-                        capabilities.setCapability(MobileCapabilityType.APP, "/Users/vagrant/deploy/UAT.ipa");
+                        capabilities.setCapability(MobileCapabilityType.APP, "/Users/vagrant/deploy/UAT.app");
                         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, TestCapabilities.AUTOMATION_NAME);
                    
                         IOSDriver<IOSElement> driver = null;
                     try {
-                        driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+                        driver = new IOSDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
                     } catch (MalformedURLException ex) {
                         Logger.getLogger(AppiumDriverBuilder.class.getName()).log(Level.SEVERE, null, ex);
                     }   
