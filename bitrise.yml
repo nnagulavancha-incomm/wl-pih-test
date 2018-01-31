@@ -16,5 +16,5 @@ workflows:
             npm install -g appium
             brew upgrade carthage
             appium &>/dev/null &
-            brew install maven
+            # brew install maven
             mvn install
