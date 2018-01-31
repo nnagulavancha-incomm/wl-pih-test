@@ -7,6 +7,7 @@ package mobile.iOS.screen;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import java.util.List;
 import org.openqa.selenium.WebElement;
 
 /**
@@ -14,14 +15,14 @@ import org.openqa.selenium.WebElement;
  * @author nnagulavancha
  */
 public class TabBarScreen extends AbstractScreen{
-     @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Bills\"]")
-       public WebElement bills;
+     @iOSFindBy(accessibility = "tab_bar_item_0")
+       public List<WebElement> bills;
      
-     @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Create Payment Slip\"]")
-       public WebElement createSlip;
+     @iOSFindBy(accessibility = "tab_bar_item_1")
+       public List<WebElement> createSlip;
      
-     @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"More\"]")
-       public WebElement more;
+     @iOSFindBy(accessibility = "tab_bar_item_2")
+       public List<WebElement> more;
      
       public TabBarScreen(AppiumDriver driver) {
             super(driver);

@@ -35,10 +35,6 @@ public class OperationalTest extends AbstactTest{
     
     @Test
     public void clickMoreCellOne(){
-//        MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Create Payment Slip");
-//        el2.click();
-//        driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"wl_pih\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeTabBar/XCUIElementTypeButton[3");
-//        driver.findElementByAccessibilityId("Create Payment Slip").click();
 //        app.getMoreScreen().firstCell.click();
 //        driver.findElementByName("More");
 //        app.getMoreScreen().secondCell.click();
