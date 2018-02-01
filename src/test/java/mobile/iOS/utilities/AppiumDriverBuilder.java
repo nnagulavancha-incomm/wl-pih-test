@@ -46,7 +46,7 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
                         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, TestCapabilities.DEVICE_NAME);
                         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, TestCapabilities.PLATFORM_NAME);
 //                        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, TestCapabilities.PLATFORM_VERSION);
-                        capabilities.setCapability(MobileCapabilityType.APP, "/Users/vagrant/Library/Developer/Xcode/DerivedData/wl_pih-bsxmqiazwawitsgufgydpdznedcp/Build/Products/Debug-iphonesimulator/wl_pih.app");
+                        capabilities.setCapability(MobileCapabilityType.APP, "/Users/vagrant/customBuildDir/wl_pih.app");
                         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, TestCapabilities.AUTOMATION_NAME);
                    
                         IOSDriver<IOSElement> driver = null;
