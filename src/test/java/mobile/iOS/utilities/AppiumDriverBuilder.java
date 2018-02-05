@@ -39,14 +39,11 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 
                 @Override
 		public IOSDriver build()  {
-                        File file = new File("wl_pih.app");
-                        System.out.println("first");
-                        String path = file.getAbsolutePath();       
-                        System.out.println("second " + path);
                         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, TestCapabilities.DEVICE_NAME);
                         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, TestCapabilities.PLATFORM_NAME);
                         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, TestCapabilities.PLATFORM_VERSION);
                         String app_url = System.getenv("BITRISE_APP_URL");
+                        System.out.println(app_url);
                         capabilities.setCapability(MobileCapabilityType.APP, app_url);
                         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, TestCapabilities.AUTOMATION_NAME);
                    
