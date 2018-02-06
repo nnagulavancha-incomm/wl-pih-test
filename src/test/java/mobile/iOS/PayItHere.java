@@ -6,10 +6,7 @@
 package mobile.iOS;
 
 import io.appium.java_client.AppiumDriver;
-import mobile.iOS.screen.GettingStartedScreen;
-import mobile.iOS.screen.LoginScreen;
-import mobile.iOS.screen.MoreScreen;
-import mobile.iOS.screen.TabBarScreen;
+import mobile.iOS.screen.*;
 
 /**
  *
@@ -26,4 +23,9 @@ public class PayItHere {
         public LoginScreen getLoginScreen() { return new LoginScreen(driver); }
         public TabBarScreen getTabScreen() {return new TabBarScreen(driver);}
         public MoreScreen getMoreScreen() {return new MoreScreen(driver);}
+        public CreateNewPaymentSlip getCreatePaymentSlipScreen() { return new CreateNewPaymentSlip(driver); }
+        public FeeListingScreen getFeeList() { return new FeeListingScreen(driver); }
+        public EnterAccountInformationScreen getEnterAccountScreen() { return new EnterAccountInformationScreen(driver); }
+        public ConfirmAccountScreen getConfirmAccountScreen() { return new ConfirmAccountScreen(driver); }
+        public EnterPaymentScreen getEnterPaymentScren() { return new EnterPaymentScreen(driver); }
 }
